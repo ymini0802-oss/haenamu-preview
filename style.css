@@ -233,3 +233,40 @@ footer small{color:#a5bbb0;font-size:11px}
 .doctor-editorial .doctor-portrait img{height:320px}
 .doctor-hero-foot{padding:14px 7%;font-size:9px;letter-spacing:1px}
 }
+
+/* Editorial content expansion — keep approved visual direction */
+.clinic-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:1px solid #dce1db;margin-top:28px;padding-top:26px}
+.clinic-principles>div{border-right:1px solid #dce1db;padding-right:14px}.clinic-principles>div:last-child{border-right:0}
+.clinic-principles small{font-size:11px;color:#81a18a;letter-spacing:1px;display:block;margin-bottom:12px}
+.clinic-principles strong{font-weight:500;font-size:15px}.clinic-principles p{font-size:12px;line-height:1.9;margin-bottom:0}
+.statement .overline{font-size:12px;letter-spacing:1px;color:#759681}
+.statement>div>p{max-width:790px}
+.section-more{margin-top:26px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.section-more p{margin-right:auto;font-size:13px}.section-more a{font-size:12px;color:#fff;border-bottom:1px solid #8da99b;padding-bottom:5px}
+.treatment-copy p{line-height:1.9}
+.other-extra{padding:24px 0}.other-extra h3{font-size:17px;font-weight:500;margin:0 0 10px}.other-extra p{font-size:13px;line-height:2;color:#667c70}
+.other-list .other-extra{display:block}
+.team-expanded{background:white}
+.doctor-profile{min-width:0}.doctor-profile .portrait{display:flex;align-items:flex-end;justify-content:center}
+.doctor-profile .doctor-specialty{font-size:13px;color:#315c46;min-height:42px;font-weight:500}
+.doctor-credentials{margin:16px 0 0;list-style:none;padding:0;border-top:1px solid #dfe6de}
+.doctor-credentials li{padding:11px 0;border-bottom:1px solid #e4eae3;font-size:12px;color:#566b5d;line-height:1.7}
+.doctor-credentials li:before{content:'·';font-size:15px;color:#749887;margin-right:8px}
+.doctor-more{border-bottom:1px solid #dfe6de;padding:14px 0}
+.doctor-more summary{cursor:pointer;font-size:12px;color:#315c46}
+.doctor-more ul{padding-left:16px;font-size:12px;color:#607367;line-height:1.9}
+.doctor-note{margin-top:35px;padding:24px 28px;background:#f0f4ef;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.doctor-note strong{font-size:14px;font-weight:500}
+.doctor-note p{font-size:12px;color:#5f7466;line-height:1.8;flex:1;min-width:200px;margin:0}
+.doctor-note a{font-size:12px;border-bottom:1px solid #81a08f;padding-bottom:5px}
+.expanded-topic{scroll-margin-top:90px;background:#fff}
+.expanded-topic:nth-of-type(even){background:#f5f7f3}
+.expanded-topic .two{align-items:start;gap:55px}
+.expanded-topic h2{font-size:clamp(27px,3vw,43px);margin:20px 0;font-weight:500}
+.expanded-topic .topic-intro{font-size:14px;line-height:2;max-width:450px;color:#5e7566}
+.topic-entries{border-top:1px solid #dce5db}
+.topic-entries article{border-bottom:1px solid #dce5db;padding:19px 0}
+.topic-entries h3{font-size:17px;font-weight:500;margin:0 0 8px}
+.topic-entries p{font-size:13px;color:#697f71;line-height:1.9;margin:0}
+@media(max-width:850px){.clinic-principles{grid-template-columns:1fr;gap:8px}.clinic-principles>div{border-right:0;border-bottom:1px solid #dce1db;padding-bottom:12px}.clinic-principles>div:last-child{border-bottom:0}.expanded-topic .two{display:block}.topic-entries{margin-top:24px}.doctor-note{display:block}.doctor-note p{margin:10px 0}.doctors-detailed{gap:16px}}
+@media(max-width:600px){.doctors-detailed{grid-template-columns:1fr}.doctor-profile .portrait{height:330px}.team-expanded .team-head{display:block}.clinic-principles{margin-top:20px}.section-more{align-items:start;flex-direction:column}.doctor-note a{display:inline-block;margin-top:8px}}

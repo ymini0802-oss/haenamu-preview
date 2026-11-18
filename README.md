@@ -21,3 +21,12 @@
 - 의료기관 구조화 데이터 값과 개별 페이지 제목·설명 검토.
 - 404/없는 이미지, 모바일 레이아웃, HTML 유효성, 예약·지도·전화 링크, 접근성, PageSpeed 수동 확인.
 - 실제 운영 사이트 `suntree365/suntree365.github.io`에 대한 수정은 대표원장님 승인 후 별도 진행.
+
+
+## 2026-11 homepage restructuring
+- Six substantive pages: index.html + spine.html, chuna.html, diet.html, herbal.html + price.html.
+- Legacy nine URLs are lightweight redirect documents for previously shared links, not substantive separate pages.
+- All doctors' qualification summaries and major experience now shown on the homepage. Verify credentials and current wording before public deployment.
+- All old links route to the consolidated topic sections, preserving bookmarked paths.
+- Schedule JSON remains maintained independently. Preview meta robots noindex stays enabled.
+- Check published GitHub Pages behavior and clinical advertising/legal compliance before launch.
