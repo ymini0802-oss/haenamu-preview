@@ -270,3 +270,85 @@ footer small{color:#a5bbb0;font-size:11px}
 .topic-entries p{font-size:13px;color:#697f71;line-height:1.9;margin:0}
 @media(max-width:850px){.clinic-principles{grid-template-columns:1fr;gap:8px}.clinic-principles>div{border-right:0;border-bottom:1px solid #dce1db;padding-bottom:12px}.clinic-principles>div:last-child{border-bottom:0}.expanded-topic .two{display:block}.topic-entries{margin-top:24px}.doctor-note{display:block}.doctor-note p{margin:10px 0}.doctors-detailed{gap:16px}}
 @media(max-width:600px){.doctors-detailed{grid-template-columns:1fr}.doctor-profile .portrait{height:330px}.team-expanded .team-head{display:block}.clinic-principles{margin-top:20px}.section-more{align-items:start;flex-direction:column}.doctor-note a{display:inline-block;margin-top:8px}}
+
+/* Separated homepage sections / refined visual hierarchy */
+.approach-refined{display:block;background:#fbfcfa;padding-top:90px;padding-bottom:90px}
+.approach-intro{display:grid;grid-template-columns:1.07fr .93fr;gap:clamp(38px,6vw,108px);align-items:center;margin:35px 0 48px}
+.approach-title .kicker,.treatment-intro .kicker{font-size:12px;letter-spacing:.6px;color:#7b9985;margin:0 0 20px}
+.approach-refined .approach-title h2{font-size:clamp(36px,3.6vw,53px);line-height:1.4;letter-spacing:-2.6px;margin:0}
+.approach-refined .approach-message{padding-left:28px;border-left:2px solid #8ba997}
+.approach-refined .approach-message strong{font-size:17px;line-height:1.7;font-weight:500;color:#2c4335}
+.approach-refined .approach-message p{font-size:14px;line-height:1.95;color:#64776a;margin:16px 0 0;max-width:600px}
+.approach-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #dce6dc;border-bottom:1px solid #dce6dc}
+.approach-steps>div{padding:29px 23px 30px 0}
+.approach-steps>div:not(:last-child){border-right:1px solid #dce6dc;margin-right:23px}
+.approach-steps span{font-size:11px;letter-spacing:1px;color:#769f85}
+.approach-steps h3{font-size:16px;font-weight:500;letter-spacing:-.5px;margin:16px 0 9px}
+.approach-steps p{font-size:12px;line-height:1.85;color:#778a7a;max-width:310px;margin:0}
+.approach-foot{display:flex;justify-content:flex-end;gap:32px;flex-wrap:wrap;margin-top:23px}
+.approach-foot>div{display:flex;gap:9px;align-items:baseline}
+.approach-foot strong{font-size:17px;color:#375e49}
+.approach-foot span{font-size:11px;color:#7b8b7e}
+.pain-section,.treatment-section{scroll-margin-top:78px}
+.pain-grid{margin-top:48px}
+.pain-grid .care-card{min-height:265px}
+.pain-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:25px}
+.pain-bottom p{max-width:770px;font-size:12px;line-height:1.9;color:#acc5b5;margin:0}
+.pain-bottom a{font-size:12px;border-bottom:1px solid #91b09d;flex-shrink:0;padding-bottom:6px;color:#eff8f0}
+.treatment-section{background:#eef2ec}
+.treatment-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(38px,6vw,100px);margin-top:30px}
+.treatment-intro h2{font-size:clamp(35px,3.8vw,56px);margin:12px 0 20px}
+.treatment-intro>p:not(.kicker){font-size:14px;line-height:2;max-width:510px;color:#5f7465}
+.treatment-intro-image{height:250px;margin-top:35px;overflow:hidden;position:relative}
+.treatment-intro-image img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.74)}
+.treatment-intro-image span{position:absolute;left:0;bottom:0;background:#163c33d9;color:white;padding:12px 19px;font-size:10px;letter-spacing:1.7px}
+.treatment-list{border-top:1px solid #cbd8cb}
+.treatment-list article{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding:25px 0;border-bottom:1px solid #cbd8cb}
+.treatment-list article small{padding-top:5px;color:#85a38a;font-size:12px}
+.treatment-list h3{font-weight:500;font-size:22px;margin:0 0 10px}
+.treatment-list article p{margin:0;color:#627869;font-size:13px;line-height:1.9}
+.treatment-list article a{display:inline-block;margin-top:12px;font-size:12px;color:#376a50;border-bottom:1px solid #91b49a;padding-bottom:5px}
+.treatment-extra{display:flex;align-items:center;gap:19px;background:#e0e9df;padding:17px;margin-top:24px}
+.treatment-extra img{height:113px;width:122px;flex:none;object-fit:cover}
+.treatment-extra strong{font-size:14px;font-weight:500}
+.treatment-extra p{font-size:12px;line-height:1.75;margin:6px 0 8px;color:#657b6b}
+.treatment-extra a{font-size:11px;color:#376a50;border-bottom:1px solid #8eaa93}
+.team-expanded .doctor-credentials li{font-size:13px;line-height:1.7}
+.team-expanded .doctor-specialty{min-height:0}
+@media(max-width:1250px){
+ .header .main-nav{display:none;position:absolute;left:0;right:0;top:100%;background:white;padding:18px 6% 24px;flex-direction:column;gap:0;box-shadow:0 14px 20px #172b211a}
+ .header .main-nav.open{display:flex}
+ .header .main-nav a{padding:13px 4px;font-size:14px;border-bottom:1px solid #e5e9e5}
+ .header .menu-button{display:block;order:3}
+ .header .book{margin-left:auto}
+}
+@media(max-width:950px){
+ .approach-intro{grid-template-columns:1fr;gap:25px;margin:25px 0 37px}
+ .approach-refined .approach-message{max-width:900px}
+ .approach-foot{justify-content:flex-start}
+ .treatment-layout{grid-template-columns:1fr;gap:35px}
+ .treatment-intro-image{max-width:570px;height:215px}
+ .pain-bottom{display:block}
+ .pain-bottom a{display:inline-block;margin-top:12px}
+}
+@media(max-width:660px){
+ .approach-refined{padding-top:70px;padding-bottom:70px}
+ .approach-refined .approach-title h2{font-size:35px;letter-spacing:-1.8px}
+ .approach-refined .approach-message{padding-left:17px}
+ .approach-steps{grid-template-columns:1fr}
+ .approach-steps>div{padding:19px 0}
+ .approach-steps>div:not(:last-child){border-right:0;border-bottom:1px solid #dce6dc;margin-right:0}
+ .approach-steps h3{margin:9px 0 8px}
+ .approach-foot{gap:10px}
+ .approach-foot>div{width:100%;border-bottom:1px solid #e3eae1;padding:4px 0}
+ .approach-foot strong{min-width:115px}
+ .pain-grid .care-card{min-height:235px}
+ .treatment-intro h2{font-size:36px}
+ .treatment-list article{grid-template-columns:32px minmax(0,1fr)}
+ .treatment-extra img{width:94px;height:106px}
+}
+@media(max-width:430px){
+ .pain-grid .care-card{padding:20px 12px;min-height:245px}
+ .pain-grid .care-card h3{font-size:17px}
+ .treatment-extra img{display:none}
+}
