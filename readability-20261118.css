@@ -1,0 +1,141 @@
+/*
+ * Haenamu responsive typography / concise-content design
+ * Loaded after the main and layout stylesheets.
+ * Patient-facing information remains readable at 360–430 CSS px.
+ */
+.weekly-mobile{display:none}
+@media(max-width:900px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{font-size:16px;line-height:1.65}
+  main .section,main .hero,main .detail-hero,main .doctor-hero{min-width:0;max-width:100%}
+  .section p,.hero p{overflow-wrap:break-word}
+  .header .brand{letter-spacing:-.8px}
+  .buttons .primary,.buttons .sub{font-size:16px}
+  .buttons .primary{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:15px 20px}
+  .buttons .sub{display:inline-flex;align-items:center;min-height:44px}
+  .section h2{letter-spacing:-1.5px;line-height:1.33}
+  .detail-faq summary{font-size:17px;line-height:1.55}
+  .detail-faq details p{font-size:16px;line-height:1.75}
+  .main-nav a{font-size:16px}
+  main .doctor-credentials li{font-size:15px;line-height:1.6}
+  .profile-note,.other-description,.schedule p,.visit p{font-size:16px;line-height:1.75}
+  .expanded-topic .topic-intro,.expanded-topic .topic-entries p{font-size:16px;line-height:1.75}
+  .detail-hero-copy p,.detail-introduction>p,.simple-hero p{font-size:16px;line-height:1.8}
+  .guide-rows p,.doctor-background p,.faq-section .detail-faq p{font-size:16px;line-height:1.75}
+  .medical-notice{font-size:14px;line-height:1.7}
+  .related-links a,.other-list a{font-size:16px}
+  .related-links{overflow-wrap:break-word}
+}
+@media(max-width:700px){
+  /* Main headline: strong but no oversized blank space */
+  .hero-text{padding:44px 6% 48px}
+  .hero-text>p:not(.lead){font-size:16px;line-height:1.55;margin:12px 0 0}
+  .hero .eyebrow{font-size:11px;letter-spacing:2.6px}
+  .hero h1{font-size:clamp(34px,8.8vw,42px);letter-spacing:-1.8px;line-height:1.26;margin:20px 0 20px}
+  .hero .lead{font-size:17px;line-height:1.75;margin:12px 0 0;color:#506b5d}
+  .hero .buttons{display:grid;grid-template-columns:minmax(0,1fr);justify-items:start;gap:12px;margin-top:29px;width:100%}
+  .hero .buttons .primary{width:100%;text-align:center;font-size:17px;font-weight:600}
+  .hero .buttons .sub{font-size:16px}
+  .hero-photo{min-height:260px}
+  .hero-photo .photo-note{padding:12px 17px;font-size:14px}
+  .section{padding-top:62px;padding-bottom:65px}
+  .section h2{font-size:clamp(30px,7.8vw,38px);line-height:1.36;letter-spacing:-1.4px;margin:15px 0 18px}
+  .approach-refined .approach-title h2{font-size:clamp(33px,8.4vw,40px);letter-spacing:-1.4px}
+  .approach-intro{margin:24px 0 28px}
+  .approach-title .kicker{font-size:14px;margin-bottom:13px}
+  .approach-refined .approach-message{padding-left:16px}
+  .approach-refined .approach-message strong{font-size:19px;font-weight:600;line-height:1.5}
+  .approach-refined .approach-message p{font-size:16px;line-height:1.7;margin-top:10px}
+  .approach-steps h3{font-size:19px;line-height:1.45}
+  .approach-steps p{font-size:16px;line-height:1.6;color:#5b7363}
+  .approach-steps>div{padding:18px 0}
+  .approach-foot{margin-top:17px}
+  .approach-foot strong{font-size:18px}
+  .approach-foot span{font-size:14px}
+  .pain-section .special-head p{font-size:16px;line-height:1.65;max-width:100%}
+  .pain-grid{margin-top:26px}
+  .pain-grid .care-card{padding:21px 12px;min-height:206px}
+  .pain-grid .care-card h3{font-size:clamp(17px,4.3vw,20px);line-height:1.4;margin:16px 0 10px}
+  .pain-grid .care-card p{font-size:15px!important;line-height:1.65;color:#d2e3d8!important}
+  .pain-grid .care-card small{font-size:11px}
+  .pain-grid .care-more{font-size:13px;line-height:1.4;padding-top:16px}
+  .pain-bottom{margin-top:18px}
+  .pain-bottom p{font-size:14px;line-height:1.65}
+  .pain-bottom a{font-size:15px;padding-bottom:6px}
+  .treatment-layout{margin-top:20px;gap:20px}
+  .treatment-intro h2{font-size:clamp(32px,8vw,39px);letter-spacing:-1.3px}
+  .treatment-intro>p:not(.kicker){font-size:17px;line-height:1.75}
+  .treatment-intro .kicker{font-size:14px}
+  .treatment-intro-image{height:190px;margin-top:19px}
+  .treatment-list article{padding:19px 0}
+  .treatment-list h3{font-size:21px;margin-bottom:7px}
+  .treatment-list article p{font-size:16px;line-height:1.6}
+  .treatment-list article a{font-size:15px;margin-top:9px}
+  .treatment-extra{margin-top:17px;gap:14px}
+  .treatment-extra strong{font-size:17px}
+  .treatment-extra p{font-size:15px;line-height:1.6}
+  .treatment-extra a{font-size:14px}
+  .other .other-description{font-size:17px;line-height:1.75}
+  .other .other-picture{margin-top:16px;height:135px}
+  .other-list a{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:15px 0}
+  .other-list a>strong{font-size:18px;font-weight:600;flex:auto}
+  .other-list a>span{font-size:15px;flex:auto;text-align:left;line-height:1.5}
+  .other-extra h3{font-size:17px}
+  .other-extra p{font-size:16px;line-height:1.7}
+  .team-head p{font-size:16px;line-height:1.7}
+  .doctor-profile .doctor-name-row h3{font-size:23px;margin:15px 0 3px}
+  .doctor-profile .doctor-specialty{font-size:16px;line-height:1.5}
+  .team-expanded .doctor-credentials li{font-size:15px;line-height:1.65;padding:12px 0}
+  .doctor-note{padding:19px}
+  .doctor-note strong{font-size:17px}
+  .doctor-note p{font-size:15px;line-height:1.7}
+  .doctor-note a{font-size:15px}
+  .faq-home .two{gap:18px}
+  .faq-home .two>div:first-child p{font-size:16px}
+  .detail-faq summary{font-size:17px;line-height:1.5}
+  .detail-faq details{padding:18px 0}
+  .detail-faq details p{font-size:16px;line-height:1.75}
+  .schedule .two{gap:20px}
+  .schedule .two>div:first-child>p{font-size:16px}
+  .schedule .alert{padding:17px 18px;margin-top:20px}
+  .schedule .alert strong{font-size:17px}
+  .schedule .alert p{font-size:15px;line-height:1.6}
+  .schedule .buttons .sub{font-size:16px}
+  .weekly-table{display:none}
+  .weekly-mobile{display:block;border-top:1px solid #cfdcd0;margin-top:8px}
+  .weekly-mobile-title{font-size:17px;font-weight:600;letter-spacing:-.4px;padding:13px 0;border-bottom:1px solid #d5e0d6}
+  .weekly-mobile>div:not(.weekly-mobile-title){display:grid;grid-template-columns:80px minmax(0,1fr);gap:14px;padding:12px 4px;border-bottom:1px solid #d5e0d6;line-height:1.5}
+  .weekly-mobile>div strong{font-size:16px;font-weight:600;color:#335943}
+  .weekly-mobile>div span{font-size:16px;color:#31473a}
+  .schedule-caption{font-size:14px;line-height:1.6;margin:12px 0}
+  .calendar-grid{display:none}
+  .calendar-title{padding:18px 0 9px}
+  .calendar-title strong{font-size:17px}
+  .calendar-title span{display:block;font-size:14px;margin-top:4px;line-height:1.6}
+  .calendar-changes{padding:16px;margin-top:12px}
+  .calendar-changes strong{font-size:16px}
+  .calendar-changes p{font-size:15px;line-height:1.6}
+  .calendar-empty{font-size:16px}
+  #visit .two{gap:25px}
+  #visit .two p{font-size:16px;line-height:1.7}
+  #visit .hours>div{padding:15px 0;gap:12px}
+  #visit .hours span,#visit .hours strong{font-size:16px;line-height:1.5}
+  #visit .parking-note strong{font-size:17px}
+  #visit .parking-note p{font-size:15px}
+  #visit .parking-note small{font-size:14px}
+  #visit .hours-info{font-size:15px}
+  .mobile{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px;align-items:stretch}
+  .mobile a{display:flex;align-items:center;justify-content:center;min-height:52px;font-size:16px;font-weight:600;line-height:1.35;padding:12px 8px;white-space:normal}
+  .mobile a:last-child{font-size:17px}
+  footer{font-size:14px;line-height:1.75}
+  .footer-links a{font-size:14px}
+}
+@media(max-width:400px){
+  .hero h1{font-size:clamp(32px,8.6vw,37px)}
+  .pain-grid .care-card{min-height:210px;padding:19px 10px}
+  .pain-grid .care-card h3{font-size:16px}
+  .pain-grid .care-card p{font-size:14.5px!important}
+  .header .brand small{font-size:8px;letter-spacing:.35px}
+  .treatment-extra img{display:none}
+  .weekly-mobile>div:not(.weekly-mobile-title){grid-template-columns:73px minmax(0,1fr)}
+}
