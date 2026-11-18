@@ -1,4 +1,0 @@
-# 미리보기 사이트: 각 HTML에 noindex 메타태그 적용
-# GitHub Pages 프로젝트 하위 경로에서는 이 robots.txt가 사이트 전체의 루트 규칙은 아닙니다.
-User-agent: *
-Disallow: /haenamu-preview/
