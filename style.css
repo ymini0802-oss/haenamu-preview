@@ -603,3 +603,13 @@ img{max-width:100%;height:auto}
  html{scroll-behavior:auto}
  *,*:before,*:after{transition:none!important;animation:none!important}
 }
+
+/* Foldable unfolded / small tablet: retain legible primary action */
+@media(min-width:741px) and (max-width:980px){
+ .hero .lead{font-size:17px;line-height:1.8}
+ .hero .buttons .hero-booking{display:inline-flex;align-items:center;justify-content:center;
+   min-height:56px;padding:16px 24px;font-size:18px;background:#173d34;color:#fff;font-weight:700}
+ .hero .buttons .hero-explore{font-size:15px}
+ .section p:not(.kicker):not(.overline){line-height:1.8}
+ .other-list span,.doctor-credentials li{font-size:14px}
+}
