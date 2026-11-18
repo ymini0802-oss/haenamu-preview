@@ -613,3 +613,19 @@ img{max-width:100%;height:auto}
  .section p:not(.kicker):not(.overline){line-height:1.8}
  .other-list span,.doctor-credentials li{font-size:14px}
 }
+
+/* Schedule accuracy: never present an unverified or previous-month roster as current. */
+.schedule[data-schedule-validation="pending"] .weekly-table,
+.schedule[data-schedule-validation="pending"] .weekly-mobile,
+.schedule[data-schedule-validation="pending"] .schedule-caption,
+.schedule[data-schedule-validation="stale"] .weekly-table,
+.schedule[data-schedule-validation="stale"] .weekly-mobile,
+.schedule[data-schedule-validation="stale"] .schedule-caption{display:none}
+.schedule[data-schedule-validation="stale"] .calendar-empty{
+ font-size:clamp(15px,1.3vw,17px);
+ line-height:1.75;
+ padding:17px 18px;
+ border-left:2px solid #b8976b;
+ background:#fff8ef;
+ color:#5d695d
+}
