@@ -689,3 +689,94 @@ img{max-width:100%;height:auto}
   .hero-photo img{object-position:center center}
   .hero .lead{overflow-wrap:break-word}
 }
+
+/* Balanced treatment detail: visual introduction to two distinct treatment methods */
+.therapy-editorial .therapy-visual-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  width:100%;
+  background:#e8eee8;
+}
+.therapy-visual-card{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  min-width:0;
+  min-height:clamp(230px,29vw,390px);
+  overflow:hidden;
+  isolation:isolate;
+  color:#fff;
+  text-decoration:none;
+}
+.therapy-visual-card + .therapy-visual-card{border-left:3px solid #f7f6f1}
+.therapy-visual-card img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.7);
+  transition:transform .25s ease;
+  z-index:-2;
+}
+.therapy-visual-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(20,42,31,.05) 18%,rgba(15,43,33,.76) 100%);
+}
+.therapy-visual-card>span{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:clamp(17px,3vw,36px);
+  gap:9px;
+  max-width:100%;
+}
+.therapy-visual-card>span small{
+  color:#e4efe6;
+  font-size:clamp(10px,1.15vw,13px);
+  letter-spacing:.1em;
+  line-height:1.5;
+}
+.therapy-visual-card>span strong{
+  font-size:clamp(21px,2.2vw,30px);
+  font-weight:600;
+  line-height:1.35;
+  overflow-wrap:break-word;
+}
+.therapy-visual-card>span strong span{font-size:.8em}
+.therapy-visual-card:focus-visible{outline:3px solid #b8cfae;outline-offset:-3px}
+@media(hover:hover){
+  .therapy-visual-card:hover img{transform:scale(1.035)}
+}
+@media(max-width:740px){
+  .therapy-editorial .detail-introduction{margin-top:18px}
+  .therapy-editorial .detail-introduction p{font-size:16px;line-height:1.7}
+  .therapy-editorial .buttons{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+  .therapy-editorial .buttons .primary{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:56px;
+    width:100%;
+    padding:13px 18px;
+    font-size:18px;
+    font-weight:700;
+  }
+  .therapy-editorial .buttons .sub{justify-self:start;font-size:14px}
+  .therapy-visual-card{min-height:clamp(170px,52vw,245px)}
+  .therapy-visual-card>span{padding:16px 12px;gap:5px}
+  .therapy-visual-card>span small{font-size:10px;letter-spacing:.02em}
+  .therapy-visual-card>span strong{font-size:clamp(16px,4.2vw,21px)}
+}
+@media(max-width:360px){
+  .therapy-visual-card>span{padding:14px 8px}
+  .therapy-visual-card>span small{font-size:9px}
+  .therapy-visual-card>span strong{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .therapy-visual-card img{transition:none}
+}
