@@ -629,3 +629,34 @@ img{max-width:100%;height:auto}
  background:#fff8ef;
  color:#5d695d
 }
+
+/* Spine & joint content: what we assess beyond the symptomatic area */
+.detail-symptoms .symptom-list>div{
+  gap:8px;
+  min-width:0;
+  min-height:164px;
+  padding:23px 17px 25px;
+}
+.detail-symptoms .symptom-list small{font-size:12px;margin-bottom:12px}
+.detail-symptoms .symptom-list strong{font-size:clamp(17px,1.5vw,20px);line-height:1.5}
+.detail-symptoms .symptom-list p{
+  margin:1px 0 0;
+  font-size:14px;
+  line-height:1.6;
+  color:#607569;
+  overflow-wrap:break-word;
+}
+.detail-symptoms .split-title p{font-size:15px;line-height:1.75}
+.faq-section .detail-faq summary{overflow-wrap:break-word}
+@media(max-width:740px){
+  .detail-symptoms .symptom-list>div{min-height:151px;padding:19px 12px 22px}
+  .detail-symptoms .symptom-list strong{font-size:17px}
+  .detail-symptoms .symptom-list p{font-size:14px;line-height:1.6}
+  .detail-symptoms .split-title p{font-size:16px}
+  .detail-symptoms .symptom-list>div:nth-child(even){border-right:0}
+  .faq-section .detail-faq{margin-top:25px}
+}
+@media(max-width:350px){
+  .detail-symptoms .symptom-list>div{min-height:0;padding:17px 7px;border-right:0}
+  .detail-symptoms .symptom-list p{font-size:15px}
+}
