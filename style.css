@@ -660,3 +660,32 @@ img{max-width:100%;height:auto}
   .detail-symptoms .symptom-list>div{min-height:0;padding:17px 7px;border-right:0}
   .detail-symptoms .symptom-list p{font-size:15px}
 }
+
+/* Ultrasound-led clinical identity: consistent focus without excessive decoration */
+.ultrasound-focus{background:#f4f8f3}
+.ultrasound-focus .split-title p{max-width:460px}
+.ultrasound-proof{display:flex;align-items:center;justify-content:space-between;gap:20px 35px;
+  padding:22px 0;margin-top:36px;border-top:1px solid #cfdbd2;border-bottom:1px solid #cfdbd2}
+.ultrasound-proof strong{font-size:clamp(18px,2vw,24px);font-weight:600;color:#1e4938;line-height:1.5;max-width:470px}
+.ultrasound-proof span{font-size:14px;line-height:1.7;color:#5c7565;max-width:360px}
+.ultrasound-focus .symptom-list{margin-top:30px}
+.ultrasound-focus .symptom-list>div{min-height:188px}
+.ultrasound-focus .symptom-list>div strong{font-size:clamp(17px,1.5vw,20px)}
+.ultrasound-focus .symptom-list>div p{font-size:14px;line-height:1.7;color:#617669}
+.ultrasound-limit{font-size:14px;line-height:1.8;color:#65796e;margin:22px 0 0;
+  padding:0 0 0 15px;border-left:2px solid #8ba999}
+@media(max-width:980px){
+  .ultrasound-proof{align-items:flex-start;flex-direction:column;gap:8px}
+  .ultrasound-proof span{max-width:100%}
+}
+@media(max-width:740px){
+  .ultrasound-proof{margin-top:25px;padding:19px 0}
+  .ultrasound-proof strong{font-size:19px}
+  .ultrasound-proof span{font-size:15px}
+  .ultrasound-focus .symptom-list{margin-top:22px}
+  .ultrasound-focus .symptom-list>div{min-height:160px}
+  .ultrasound-focus .symptom-list>div p{font-size:14px}
+  .ultrasound-limit{font-size:14px}
+  .hero-photo img{object-position:center center}
+  .hero .lead{overflow-wrap:break-word}
+}
