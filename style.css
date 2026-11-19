@@ -846,3 +846,31 @@ img{max-width:100%;height:auto}
  .flower-facts>div strong{font-size:26px}
  .flower-facts>div span{letter-spacing:0;font-size:10px}
 }
+
+
+/* Herbal-care editorial copy: page-specific reading hierarchy */
+.herbal-care-page .expanded-topic .topic-keyline{
+  margin:8px 0 15px;
+  color:#245948;
+  font-size:clamp(21px,2.15vw,29px);
+  line-height:1.43;
+  letter-spacing:-.035em;
+  font-weight:600;
+}
+.herbal-care-page .expanded-topic .topic-intro{
+  max-width:550px;
+  font-size:clamp(15px,1.12vw,17px);
+  line-height:1.83;
+}
+.herbal-care-page .topic-entries h3{font-size:clamp(17px,1.3vw,19px);font-weight:600}
+.herbal-care-page .topic-entries p{font-size:clamp(14px,1.12vw,16px);line-height:1.8}
+.herbal-care-page .detail-symptoms .symptom-list p{
+  font-size:clamp(14px,1.1vw,16px);
+  line-height:1.65;
+}
+@media (max-width:700px){
+  .herbal-care-page .expanded-topic .topic-keyline{font-size:clamp(21px,5.3vw,27px)}
+  .herbal-care-page .expanded-topic .topic-intro{font-size:16px}
+  .herbal-care-page .topic-entries p{font-size:15px}
+  .herbal-care-page .detail-symptoms .symptom-list p{font-size:15px}
+}
