@@ -1099,3 +1099,21 @@ img{max-width:100%;height:auto}
   .detail-symptoms .symptom-list small{margin-bottom:4px}
   .detail-symptoms .symptom-list p{font-size:15px;line-height:1.7}
 }
+
+/* Pain card labels: keep the desktop design; allow longer condition names on phones. */
+@media(max-width:480px){
+  .pain-section .pain-grid{grid-template-columns:minmax(0,1fr)}
+  .pain-section .pain-grid .care-card{
+    min-height:0;
+    border-right:0;
+    border-bottom:1px solid #577369;
+    padding:21px 3px 24px;
+  }
+  .pain-section .pain-grid .care-card:last-child{border-bottom:0}
+  .pain-section .pain-grid .care-card h3{
+    font-size:21px;
+    line-height:1.45;
+    margin:13px 0 8px;
+    word-break:keep-all;
+  }
+}
