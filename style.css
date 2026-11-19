@@ -780,3 +780,69 @@ img{max-width:100%;height:auto}
 @media(prefers-reduced-motion:reduce){
   .therapy-visual-card img{transition:none}
 }
+
+/* Flower Road: gentle, practical program presentation without generic diet promises */
+.flower-page{--flower-tint:#f7f1ec;--flower-line:#e5d9cf;--flower-accent:#8f5e59}
+.flower-page .detail-hero .detail-media-image img{object-position:center center}
+.flower-page .flower-hero .detail-masthead{background:#f9f7f2}
+.flower-page .flower-hero .detail-media-aside{background:#efe8e2}
+.flower-principles{background:#fff}
+.flower-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:35px}
+.flower-card-grid article{background:var(--flower-tint);border:1px solid var(--flower-line);padding:clamp(18px,2.5vw,30px);min-width:0}
+.flower-card-grid small{font-size:12px;letter-spacing:.08em;color:var(--flower-accent);font-weight:600}
+.flower-card-grid h3{font-size:clamp(19px,2vw,25px);margin:18px 0 10px;line-height:1.4;font-weight:600;letter-spacing:-.04em}
+.flower-card-grid p{font-size:16px;line-height:1.75;color:#63716a;margin:0}
+.flower-supporting-note{font-size:14px;line-height:1.8;margin:25px 0 0;color:#6e7d72}
+.flower-product{background:#f5f7f2}
+.flower-product-layout,.flower-guide-dose-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:clamp(25px,5vw,75px)}
+.flower-product-layout>div>p:not(.page-category),.flower-guide-dose-layout>div>p:not(.page-category){font-size:17px;line-height:1.9;color:#64756a;max-width:760px}
+.flower-product-layout h2,.flower-guide-dose-layout h2{margin:16px 0 28px}
+.flower-text-link{display:inline-flex;gap:12px;align-items:center;color:#234c3a;border-bottom:1px solid #789c80;font-weight:600;text-decoration:none;padding:8px 0;margin-top:15px;line-height:1.7}
+.flower-text-link:focus-visible{outline:2px solid #245e44;outline-offset:5px}
+.flower-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;min-width:0}
+.flower-facts>div{display:flex;flex-direction:column;gap:5px;align-items:flex-start;justify-content:center;min-width:0;background:#fff;border:1px solid #dfe4da;padding:clamp(18px,2.4vw,28px);min-height:170px}
+.flower-facts>div span{font-size:10px;letter-spacing:.1em;font-weight:600;color:#748a78}
+.flower-facts>div strong{font-size:clamp(27px,3.6vw,47px);line-height:1.25;color:#214c39;font-weight:600}
+.flower-facts>div p{font-size:13px;line-height:1.6;color:#6b786f;margin:0}
+.flower-facts>small{grid-column:1/-1;font-size:12px;color:#748077;line-height:1.6}
+.flower-steps{background:#f5f8f3}
+.flower-page .faq-section .detail-faq{max-width:920px}
+.flower-guide-hero{background:#f9f7f2}
+.flower-guide-hero .breadcrumbs{margin:15px 0 30px}
+.flower-guide-hero h1{max-width:940px}
+.flower-guide-hero .buttons{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.flower-guide-dose{background:#f5f8f3}
+.flower-guide-living{background:#fff}
+.flower-guide-faq{background:#fafaf6}
+.flower-dose-note{padding:20px 24px;border-left:3px solid #a7bca8;background:#fff;margin-top:25px;display:flex;flex-direction:column;gap:8px}
+.flower-dose-note strong{font-size:16px;color:#244d3c}
+.flower-dose-note span{font-size:15px;color:#66756b;line-height:1.7}
+@media(max-width:980px){
+ .flower-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .flower-card-grid article:last-child{grid-column:1/-1}
+ .flower-product-layout,.flower-guide-dose-layout{grid-template-columns:minmax(0,1fr);gap:24px}
+ .flower-facts{max-width:700px}
+}
+@media(max-width:740px){
+ .flower-page .detail-heading-row h1{font-size:clamp(33px,7.6vw,42px);letter-spacing:-.04em}
+ .flower-page .detail-introduction p{font-size:16px;line-height:1.75}
+ .flower-card-grid{grid-template-columns:minmax(0,1fr);gap:11px;margin-top:24px}
+ .flower-card-grid article:last-child{grid-column:auto}
+ .flower-card-grid article{padding:20px}
+ .flower-card-grid h3{font-size:20px;margin:10px 0 7px}
+ .flower-card-grid p{font-size:16px}
+ .flower-product-layout>div>p:not(.page-category),.flower-guide-dose-layout>div>p:not(.page-category){font-size:16px}
+ .flower-facts{gap:10px}
+ .flower-facts>div{min-height:138px;padding:15px}
+ .flower-facts>div strong{font-size:30px}
+ .flower-facts>div p{font-size:13px}
+ .flower-guide-hero .buttons{display:grid;grid-template-columns:1fr}
+ .flower-guide-hero .buttons .primary{width:100%;min-height:56px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
+ .flower-guide-hero .buttons .sub{justify-self:start}
+ .flower-dose-note{padding:18px}
+}
+@media(max-width:390px){
+ .flower-facts>div{padding:12px}
+ .flower-facts>div strong{font-size:26px}
+ .flower-facts>div span{letter-spacing:0;font-size:10px}
+}
