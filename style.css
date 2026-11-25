@@ -1117,3 +1117,118 @@ img{max-width:100%;height:auto}
     word-break:keep-all;
   }
 }
+
+/* Final design A: consistent navigation, readable type and restrained contrast */
+:root{
+  --readable-green:#526b5b;
+  --heading-green:#537b65;
+}
+/* Preserve the ivory/deep-green palette, including the dark pain section. */
+.hero h1 em,.detail-hero h1 em,.simple-hero h1 em,
+.detail-editorial .detail-heading-row h1 em,
+.section:not(.dark) h2 em{color:var(--heading-green)}
+.eyebrow,.index,.breadcrumbs,.detail-masthead-meta .breadcrumbs,
+.detail-heading-row .page-category,
+.approach-title .kicker,.treatment-intro .kicker,
+.approach-steps span,.approach-foot span,
+.treatment-list article small,.guide-num,
+.detail-symptoms .symptom-list small,
+.herbal-care-page .expanded-topic .index,
+.herbal-care-page .expanded-topic .topic-entries article::before{
+  color:var(--readable-green)
+}
+.dark .index,.dark .eyebrow{color:#b9ccc0}
+.header nav a:hover{color:#315c46}
+.header .brand small{color:var(--readable-green)}
+
+/* Patient-facing copy: keep the original layouts and improve reading size. */
+.lead,.detail-introduction>p,.other-description,
+.approach-refined .approach-message p,.approach-steps p,
+.treatment-intro>p:not(.kicker),.treatment-list article p,
+.treatment-extra p,.other-extra p,
+.expanded-topic .topic-intro,.topic-entries p,
+.herbal-care-page .expanded-topic .topic-entries p,
+.detail-symptoms .symptom-list p,
+.herbal-care-page .detail-symptoms .symptom-list p,
+.ultrasound-focus .symptom-list>div p,.ultrasound-proof span,
+.guide-rows p,.detail-faq details p,.detail-cta p,
+.flower-card-grid p{
+  font-size:16px;
+  color:var(--readable-green);
+  line-height:1.75
+}
+.special-head p{font-size:16px;line-height:1.75}
+.pain-section .pain-grid .care-card p{font-size:15px!important;line-height:1.75}
+.pain-section .care-more,.pain-bottom a{font-size:14px}
+.pain-bottom p{font-size:14px}
+.approach-foot span,.other-list span{font-size:14px;color:var(--readable-green)}
+.treatment-list article a,.treatment-extra a{font-size:14px}
+.team-expanded .doctor-credentials li{font-size:15px;line-height:1.7}
+.doctor-profile .doctor-specialty{font-size:16px;line-height:1.65}
+.doctor-note p,.doctor-note a{font-size:15px}
+.doctor-name-row h3 span,.doctor-name-row small{color:var(--readable-green)}
+.detail-media-aside p,.detail-media-aside a{font-size:13px;color:var(--readable-green)}
+.detail-faq summary{font-size:17px;line-height:1.55}
+.detail-faq summary::after{flex:0 0 auto}
+.medical-notice,.ultrasound-limit,.topic-entries .topic-safety-note,
+.flower-supporting-note,.flower-facts>small{
+  color:var(--readable-green);
+  font-size:14px;
+  line-height:1.75
+}
+.topic-entries .topic-safety-note{margin:16px 0 0;padding-left:13px;border-left:2px solid #8ba999}
+.flower-facts>div span{color:var(--readable-green)}
+.flower-facts>div p{font-size:15px;color:var(--readable-green)}
+.schedule .alert p,.schedule-caption,.hours-info,.parking-note p{
+  font-size:15px;line-height:1.75;color:var(--readable-green)
+}
+.schedule table{font-size:14px}
+.weekly-table caption,.calendar-title span{font-size:13px;color:var(--readable-green)}
+.calendar-cell>span{font-size:12px}
+.price-section table{font-size:16px;line-height:1.65}
+.price-section caption{font-size:14px;color:var(--readable-green)}
+.price-section td:nth-child(2){white-space:nowrap}
+.price-wrap{min-width:0}
+.related-links a{font-size:15px;overflow-wrap:anywhere}
+footer{font-size:14px}
+footer small{font-size:12px}
+footer p{overflow-wrap:anywhere}
+
+/* Eight common navigation items: switch to the existing menu before crowding. */
+@media(max-width:1360px){
+  .header{gap:12px}
+  .header .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;width:100%;
+    padding:16px var(--fluid-gutter) 23px;background:#fff;
+    box-shadow:0 14px 20px #172b211a;
+    flex-direction:column;align-items:stretch;gap:0;
+    max-height:calc(100vh - 90px);
+    max-height:calc(100dvh - 90px);
+    overflow-y:auto;overscroll-behavior:contain
+  }
+  .header .main-nav.open{display:flex}
+  .header .main-nav a{
+    padding:12px 4px;border-bottom:1px solid #e5e9e5;
+    white-space:normal;font-size:16px;line-height:1.5;flex-shrink:0
+  }
+  .header .menu-button{display:block;order:3;margin-left:auto}
+  .header .book{margin-left:auto}
+}
+@media(max-width:740px){
+  .header{gap:8px}
+  .header .book{display:none}
+  .detail-faq details p{padding-right:10px}
+  .team-expanded .doctor-credentials li{font-size:16px;line-height:1.7}
+  .price-section th,.price-section td{padding:14px 12px}
+  .price-section table{font-size:16px}
+  .price-scroll-hint{font-size:15px}
+  .detail-symptoms .symptom-list p,
+  .herbal-care-page .detail-symptoms .symptom-list p,
+  .ultrasound-focus .symptom-list>div p{font-size:16px}
+  .schedule .alert p,.hours-info,.parking-note p{font-size:16px}
+  .approach-foot span,.other-list span{font-size:15px}
+  .expanded-topic .two{gap:25px}
+  .topic-entries h3{font-size:18px;line-height:1.5}
+  .detail-introduction .buttons,.detail-cta .buttons{gap:12px 18px}
+  .medical-notice,.ultrasound-limit,.topic-entries .topic-safety-note{font-size:15px}
+}
