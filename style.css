@@ -1437,3 +1437,29 @@ main#content .detail-cta .buttons{flex-wrap:wrap}
   .section h2{font-size:27px}
   .hero .buttons{max-width:100%}
 }
+
+/* Mobile patient readability: preserve headings and enlarge supporting copy. */
+@media(max-width:740px){
+  main#top .section p,main#content .section p,
+  main#content .detail-introduction>p,main#content .detail-cta p,
+  main#top .hero .lead,main#content .simple-hero p,
+  .treatment-editorial-b .featured-treatments .treatment-feature-description,
+  .herbal-care-page .expanded-topic .topic-intro{
+    font-size:18px;line-height:1.8;
+  }
+  .pain-section .pain-grid .care-card p{font-size:17px!important;line-height:1.75}
+  .team-expanded .doctor-credentials li,
+  .doctor-profile .doctor-specialty,
+  main#content .topic-entries p,
+  main#content .detail-symptoms .symptom-list p,
+  main#content .ultrasound-focus .symptom-list>div p{font-size:17px;line-height:1.75}
+  main#top details summary,main#content details summary,
+  main#top details p,main#content details p{font-size:18px;line-height:1.75}
+  .weekly-mobile strong,.weekly-mobile span,.hours-info{font-size:17px;line-height:1.65}
+  .schedule .alert p,.schedule .calendar-changes p{font-size:18px;line-height:1.75}
+  .editorial-approach-facts span,.other-list span,.schedule-caption,
+  .medical-notice,.ultrasound-limit,.detail-media-aside p,
+  .detail-media-aside a,.related-links a{font-size:16px;line-height:1.7}
+  main#top .section .schedule-caption,main#content .section .medical-notice,
+  main#content .section .ultrasound-limit{font-size:16px}
+}
