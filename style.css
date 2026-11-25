@@ -1407,3 +1407,33 @@ main#content .detail-cta .buttons{flex-wrap:wrap}
     grid-template-columns:minmax(0,1fr);
   }
 }
+
+/* Mobile refinement: readable controls, safe areas and compact first screen. */
+@media(max-width:740px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:84px}
+  .header .menu-button{min-width:48px;min-height:48px;padding:8px}
+  .header .main-nav a{min-height:48px;display:flex;align-items:center}
+  .mobile{padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+  .mobile a{min-height:52px}
+  .hero-text{padding-top:36px;padding-bottom:32px}
+  .hero .buttons{gap:12px}
+  .hero .hero-booking{min-height:56px;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .hero .hero-explore{min-height:44px;display:flex;align-items:center}
+  .editorial-approach-facts{grid-template-columns:minmax(0,1fr);gap:0}
+  .editorial-approach-facts>div{padding:12px 0;border-bottom:1px solid #d5ddd4;gap:5px}
+  .editorial-approach-facts span{font-size:15px}
+  .team-expanded .doctor-credentials li{overflow-wrap:anywhere;word-break:keep-all}
+  .weekly-mobile>div:not(.weekly-mobile-title){min-height:48px;align-items:center}
+  .weekly-mobile span{overflow-wrap:anywhere}
+  .schedule .calendar-changes p{overflow-wrap:anywhere;line-height:1.7}
+  .visit a,.detail-cta .buttons a,.related-links a{min-height:44px}
+  main#top>section,main#top .two>*,main#top .doctors>*,main#top .featured-treatments>*{min-width:0}
+  main#top img,main#content img{max-width:100%}
+  main#top p,main#content p{overflow-wrap:break-word}
+}
+@media(max-width:360px){
+  .header .brand{font-size:18px}
+  .hero h1{font-size:30px}
+  .section h2{font-size:27px}
+  .hero .buttons{max-width:100%}
+}
