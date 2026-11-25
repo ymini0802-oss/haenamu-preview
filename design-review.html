@@ -95,7 +95,26 @@
 .site[data-layout="3"] .highlights{background:var(--light)}
 .site[data-layout="3"] .highlight,.site[data-layout="3"] .highlight:first-child{background:var(--card);color:var(--dark);border-color:var(--secondary)}
 .site[data-layout="3"] .highlight:first-child{background:var(--action);color:#fff;border-color:var(--action)}
-</style></head><body><div class="review"><h1>해나무한의원 디자인 비교</h1><p>대표원장 검수용 · 밝은 색상 6종 × 레이아웃 3종. 동일한 레이아웃에서 색감만 비교해 보세요. 실제 홈페이지에는 아직 적용하지 않았습니다.</p><div class="controls"><fieldset><legend>1. 밝은 색상 선택</legend><div class="choices" id="colors"></div></fieldset><fieldset><legend>2. 레이아웃 선택</legend><div class="choices" id="layouts"></div></fieldset><div class="viewbar"><button class="choice" id="desktop" aria-pressed="true">PC 보기</button><button class="choice" id="mobile" aria-pressed="false">모바일 412px</button><button class="choice" id="share">선택 링크 복사</button><output id="status" aria-live="polite"></output></div></div>
+/* Airy review revision: light surfaces throughout, saturated colors only for small accents. */
+.site{background:#fff;--line:#e1e6ec}
+.site .head,.site .section:not(.conditions):not(.team){background:#fff}
+.site .hero,.site[data-layout="2"] .hero,.site[data-layout="3"] .hero{background:linear-gradient(120deg,#fff 5%,var(--light) 100%)}
+.site .highlights,.site[data-layout="2"] .highlights,.site[data-layout="3"] .highlights{background:#fff;border:0}
+.site .highlight,.site .highlight:first-child,.site[data-layout="2"] .highlight,.site[data-layout="2"] .highlight:first-child,.site[data-layout="3"] .highlight,.site[data-layout="3"] .highlight:first-child{background:var(--light);color:var(--dark);border:1px solid var(--secondary)}
+.site .highlight:first-child strong{color:var(--accent)}
+.site .facts,.site[data-layout="2"] .facts,.site[data-layout="3"] .facts{background:var(--light);color:var(--dark);border:0}
+.site .conditions,.site[data-layout="2"] .conditions,.site .team,.site[data-layout="3"] .team{background:var(--light)}
+.site .condition,.site[data-layout="2"] .condition,.site .treat,.site .doctor,.site[data-layout="3"] .doctor{background:#fff;border-color:var(--line)}
+.site[data-layout="2"] .condition{border-left:4px solid var(--secondary)}
+.site[data-layout="3"] .doctor div{border-color:var(--secondary)}
+.site .btn,.site[data-layout="3"] .message .btn{background:var(--light);color:var(--accent);border:1px solid var(--secondary)}
+.site .message .btn,.site[data-layout="3"] .message .btn{background:var(--secondary);color:var(--dark);border:1px solid var(--secondary)}
+.site .message .btn:hover,.site .head .btn:hover{background:#fff}
+.site .foot{background:#fff;border-top:1px solid var(--line);color:var(--dark)}
+.site .foot p{color:var(--dark)}
+.site .photo{background:var(--light)}
+.site .doctor img,.site[data-layout="3"] .doctor img{background:#fff}
+</style></head><body><div class="review"><h1>해나무한의원 디자인 비교</h1><p>대표원장 검수용 · 밝은 색상 6종 × 레이아웃 3종 · 라이트 톤 강화. 동일한 레이아웃에서 색감만 비교해 보세요. 실제 홈페이지에는 아직 적용하지 않았습니다.</p><div class="controls"><fieldset><legend>1. 밝은 색상 선택</legend><div class="choices" id="colors"></div></fieldset><fieldset><legend>2. 레이아웃 선택</legend><div class="choices" id="layouts"></div></fieldset><div class="viewbar"><button class="choice" id="desktop" aria-pressed="true">PC 보기</button><button class="choice" id="mobile" aria-pressed="false">모바일 412px</button><button class="choice" id="share">선택 링크 복사</button><output id="status" aria-live="polite"></output></div></div>
 <div class="stage" id="stage"><div class="site" id="site" data-layout="1"><header class="head"><div class="brand"><img src="logo2.png" alt="">해나무한의원</div><div class="nav" aria-hidden="true"><span>한의원 소개</span><span>통증 진료</span><span>치료 방법</span><span>의료진</span><span>오시는 길</span></div><a class="btn" href="#preview-note">네이버 예약 ↗</a></header>
 <section class="hero"><div class="message"><p class="kicker">동탄 나루마을 · 척추·관절 중심 진료</p><h1>척추·관절 통증,<br><em>일상의 움직임까지.</em></h1><p class="lead">목·허리부터 어깨·무릎까지.<br>증상을 살피고, 필요한 진료를 안내합니다.</p><a class="btn" href="#preview-note">네이버 예약하기 ↗</a></div><div class="photo"><img src="spine.webp" alt="척추 모형을 활용한 의료진의 설명 장면"></div></section>
 <section class="highlights" aria-label="진료시간"><div class="highlight"><strong>365일</strong><span>매일 진료</span><small>토요일도 진료</small></div><div class="highlight"><strong>야간진료</strong><span>평일 오후 8시까지</span><small>퇴근 후에도</small></div><div class="highlight"><strong>일·공휴일</strong><span>오후 3시까지</span><small>점심시간 없이</small></div></section><div class="facts"><span>한의사 3인 진료</span><span>전원 미국 초음파 자격증 보유</span><span>2016년부터 동탄 진료</span></div>
