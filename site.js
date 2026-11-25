@@ -1,3 +1,5 @@
+/* Identify KakaoTalk webview without changing browser zoom. */
+if (/KAKAOTALK/i.test(navigator.userAgent || '')) document.documentElement.classList.add('kakao-inapp');
 (()=>{
   'use strict';
   const toggle=document.querySelector('.menu-button');
