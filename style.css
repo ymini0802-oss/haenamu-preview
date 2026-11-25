@@ -1279,3 +1279,9 @@ footer p{overflow-wrap:anywhere}
 .editorial-approach-facts small{font-size:14px;font-weight:500;margin-left:3px}
 .editorial-approach-facts span{font-size:14px;line-height:1.55;color:#526b5b;word-break:keep-all}
 @media(max-width:740px){.editorial-approach{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:52px}.editorial-approach h2{font-size:clamp(30px,7.5vw,42px)}.editorial-approach-copy{margin:22px 0 28px}.editorial-approach-facts{gap:10px;padding-top:22px}.editorial-approach-facts strong{font-size:20px}.editorial-approach-facts small{font-size:12px}.editorial-approach-facts span{font-size:13px}}
+
+/* Homepage treatment introductions: non-interactive cards */
+.featured-treatments>article{display:block;background:#fff;color:#24372c;border:1px solid #d5dfd5;min-width:0}
+.featured-treatments>article>div{padding:24px}
+.featured-treatments>article p{margin:0;line-height:1.8;word-break:keep-all}
+@media(max-width:740px){.featured-treatments>article>div{padding:18px}}
