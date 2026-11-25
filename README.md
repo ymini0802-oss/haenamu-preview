@@ -24,7 +24,7 @@
 
 
 ## 2026-11 homepage restructuring
-- Six substantive pages: index.html + spine.html, chuna.html, diet.html, herbal.html + price.html.
+- Main pages include index.html, spine.html, chuna-therapy.html, pharmacopuncture.html, diet.html, herbal.html and price.html.
 - Legacy nine URLs are lightweight redirect documents for previously shared links, not substantive separate pages.
 - All doctors' qualification summaries and major experience now shown on the homepage. Verify credentials and current wording before public deployment.
 - All old links route to the consolidated topic sections, preserving bookmarked paths.
