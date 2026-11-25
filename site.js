@@ -29,6 +29,7 @@
   const section=document.getElementById('schedule');
   const setMode=mode=>section&&section.setAttribute('data-schedule-validation',mode);
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const colorNames=s=>escape(s).replace(/김성수|박세운|최영재/g,n=>'<span style="color:'+({'김성수':'#245b99','박세운':'#a04438','최영재':'#111111'}[n])+';font-weight:600">'+n+'</span>');
   const stale=message=>{
     setMode('stale');
     if(status)status.innerHTML='<strong>최신 일정 확인이 필요합니다</strong><p>'+escape(message)+'</p>';
@@ -49,14 +50,14 @@
       const mobile=section.querySelectorAll('.weekly-mobile div span');
       days.forEach((day,i)=>{
         const doctors=d.weekly[day];
-        if(cells[i])cells[i].innerHTML=doctors.length?doctors.map(escape).join('<br>'):'휴진';
-        if(mobile[i])mobile[i].textContent=doctors.join(' · ')||'휴진';
+        if(cells[i])cells[i].innerHTML=doctors.length?doctors.map(colorNames).join('<br>'):'휴진';
+        if(mobile[i])mobile[i].innerHTML=doctors.map(colorNames).join(' · ')||'휴진';
       });
       setMode('loaded');
       const changes=Object.entries(d.overrides||{}).filter(([date,entry])=>/^\d{4}-\d{2}-\d{2}$/.test(date)&&date>=todayKST&&entry&&typeof entry==='object').sort(([a],[b])=>a.localeCompare(b));
       if(status)status.innerHTML='<strong>진료 일정 변경 안내</strong><p>'+(changes.length?'예정된 휴진·대진 등 변경 일정을 확인해 주세요.':'현재 등록된 예정 변경 일정이 없습니다. 방문 전 전화로 확인하실 수 있습니다.')+'</p>';
       host.hidden=!changes.length;
-      const markup=changes.length?'<div class="calendar-changes"><strong>예정된 변경 일정</strong>'+changes.map(([date,entry])=>'<p><b>'+escape(date.slice(0,4)+'년 '+Number(date.slice(5,7))+'월 '+Number(date.slice(8,10))+'일')+'</b> · '+escape(entry.note||(Array.isArray(entry.doctors)?entry.doctors.join(', ')||'휴진':'일정 변경'))+'</p>').join('')+'</div>':'';
+      const markup=changes.length?'<div class="calendar-changes"><strong>예정된 변경 일정</strong>'+changes.map(([date,entry])=>'<p><b>'+escape(date.slice(0,4)+'년 '+Number(date.slice(5,7))+'월 '+Number(date.slice(8,10))+'일')+'</b> · '+colorNames(entry.note||(Array.isArray(entry.doctors)?entry.doctors.join(', ')||'휴진':'일정 변경'))+'</p>').join('')+'</div>':'';
       host.innerHTML=markup;
     })
     .catch(()=>stale('월별 일정을 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.'));
