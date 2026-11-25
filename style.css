@@ -1232,3 +1232,36 @@ footer p{overflow-wrap:anywhere}
   .detail-introduction .buttons,.detail-cta .buttons{gap:12px 18px}
   .medical-notice,.ultrasound-limit,.topic-entries .topic-safety-note{font-size:15px}
 }
+
+/* Concise homepage sections */
+.concise-approach h2{margin:28px 0 34px}
+.concise-approach .approach-steps>div{padding:22px 24px}
+.concise-approach .approach-steps h3{font-size:21px;margin:8px 0 0}
+.concise-approach .approach-foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.concise-approach .approach-foot>div{display:flex;flex-direction:column;align-items:flex-start;gap:8px;background:#e7eee6;padding:24px;border:0}
+.concise-approach .approach-foot strong{font-size:clamp(22px,2.5vw,34px);line-height:1.3}
+.concise-approach .approach-foot span{font-size:15px}
+.featured-treatments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.featured-treatments>a{display:block;background:#fff;color:#24372c;border:1px solid #d5dfd5;text-decoration:none;min-width:0}
+.featured-treatments img{display:block;width:100%;height:clamp(180px,21vw,330px);object-fit:cover;object-position:center}
+.featured-treatments>a>div{padding:24px}
+.featured-treatments h3{font-size:clamp(21px,2vw,30px);margin:0 0 12px}
+.featured-treatments p{font-size:16px;line-height:1.65;color:#526b5b}
+.featured-treatments span{display:inline-block;margin-top:12px;color:#375e49;font-size:15px}
+.featured-treatments>a:hover h3{text-decoration:underline}
+.concise-other{align-items:center}
+.concise-other .other-list strong{font-size:22px}
+.concise-other .other-list span{font-size:15px}
+.concise-schedule .two{grid-template-columns:minmax(0,1fr);gap:24px}
+.concise-schedule .weekly-table{width:100%;table-layout:fixed;font-size:18px}
+.concise-schedule .weekly-table th,.concise-schedule .weekly-table td{padding:18px 8px;text-align:center}
+.concise-schedule .schedule-calendar[hidden]{display:none!important}
+.concise-schedule .calendar-changes{margin-top:16px}
+@media(max-width:740px){
+.concise-approach .approach-foot{grid-template-columns:1fr;gap:8px}
+.concise-approach .approach-foot>div{padding:16px;gap:4px}
+.concise-approach .approach-steps>div{padding:14px 0}
+.featured-treatments{grid-template-columns:1fr;gap:16px}
+.featured-treatments>a>div{padding:18px}
+.concise-other .other-list strong{font-size:19px}
+}
