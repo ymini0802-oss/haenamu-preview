@@ -1491,3 +1491,14 @@ footer{background:#F3F8FF;color:#405675}
  .pain-section .pain-grid .care-card{padding:20px 16px}
  .pain-section .pain-grid .care-card:last-child{border-bottom:1px solid #DCE8F8}
 }
+
+/* Home medical team: comfortable inner spacing for profile text. */
+#team .doctor-profile{min-width:0;box-sizing:border-box;padding:0 24px 24px;background:#fff;border:1px solid #DCE8F8;border-radius:10px;overflow:hidden}
+#team .doctor-profile .portrait{margin:0 -24px 0;width:calc(100% + 48px);max-width:none}
+#team .doctor-name-row{margin-top:20px;gap:12px}
+#team .doctor-name-row h3{margin:0;line-height:1.5}
+#team .doctor-specialty{margin:16px 0 18px;line-height:1.6}
+#team .doctor-credentials{margin:0;padding:0;list-style:none}
+#team .doctor-credentials li{position:relative;padding:12px 0 12px 16px;line-height:1.7;overflow-wrap:anywhere}
+#team .doctor-credentials li::before{position:absolute;left:0;top:12px}
+@media(max-width:740px){#team .doctor-profile{padding:0 20px 22px}#team .doctor-profile .portrait{margin:0 -20px;width:calc(100% + 40px)}#team .doctor-credentials li{font-size:17px;line-height:1.7}}
