@@ -32,6 +32,7 @@
   const stale=message=>{
     setMode('stale');
     if(status)status.innerHTML='<strong>최신 일정 확인이 필요합니다</strong><p>'+escape(message)+'</p>';
+    host.hidden=false;
     host.innerHTML='<p class="calendar-empty">원장별 진료 일정은 네이버 예약 또는 전화로 확인해 주세요.</p>';
   };
   // Clinic time: KST (UTC+09:00). This is independent of the visitor's phone timezone.
@@ -56,33 +57,9 @@
         const prefix=thisMonth===yearMonth?'이번 달':'등록된';
         status.innerHTML='<strong>'+year+'년 '+month+'월 진료 일정</strong><p>'+prefix+' 일정은 변경될 수 있습니다. 방문 전 네이버 예약에서 확인해 주세요.</p>';
       }
-      const first=(new Date(year,month-1,1).getDay()+6)%7;
-      const days=new Date(year,month,0).getDate();
-      let markup='<div class="calendar-title"><strong>'+year+'년 '+month+'월</strong><span>진료 일정은 변경될 수 있습니다.</span></div>';
-      markup+='<div class="calendar-grid" role="grid" aria-label="'+year+'년 '+month+'월 진료 달력">';
-      ['월','화','수','목','금','토','일'].forEach(w=>markup+='<div class="calendar-head" role="columnheader">'+w+'</div>');
-      for(let i=0;i<first;i++)markup+='<div class="calendar-cell empty" aria-hidden="true"></div>';
-      for(let day=1;day<=days;day++){
-        const date=yearMonth+'-'+String(day).padStart(2,'0');
-        const weekday=new Date(year,month-1,day).getDay();
-        const override=d.overrides&&d.overrides[date];
-        const doctors=(override&&Array.isArray(override.doctors)?override.doctors:d.weekly[String(weekday)])||[];
-        const today=date===todayKST;
-        markup+='<div class="calendar-cell'+(override?' changed':'')+(today?' today':'')+'" role="gridcell" aria-label="'+escape(date+' '+doctors.join(' '))+'">';
-        markup+='<strong>'+day+'</strong><span>'+doctors.map(escape).join('<br>')+'</span>';
-        if(override&&override.note)markup+='<small>'+escape(override.note)+'</small>';
-        markup+='</div>';
-      }
-      markup+='</div>';
-      const changes=Object.entries(d.overrides||{}).filter(([date])=>
-        date.startsWith(yearMonth+'-')&&date>=todayKST).sort(([a],[b])=>a.localeCompare(b));
-      if(changes.length){
-        markup+='<div class="calendar-changes" aria-label="앞으로의 진료 일정 변경"><strong>예정된 일정 변경</strong>';
-        markup+=changes.map(([date,entry])=>
-          '<p><b>'+Number(date.slice(-2))+'일</b> · '+
-          escape(entry.note||(Array.isArray(entry.doctors)?entry.doctors.join(', '):'일정 변경'))+'</p>').join('');
-        markup+='</div>';
-      }
+      const changes=Object.entries(d.overrides||{}).filter(([date])=>date.startsWith(yearMonth+'-')&&date>=todayKST).sort(([a],[b])=>a.localeCompare(b));
+      host.hidden=!changes.length;
+      let markup=changes.length?'<div class="calendar-changes"><strong>'+year+'년 '+month+'월 변경 안내</strong>'+changes.map(([date,entry])=>'<p><b>'+Number(date.slice(-2))+'일</b> · '+escape(entry.note||(Array.isArray(entry.doctors)?entry.doctors.join(', '):'일정 변경'))+'</p>').join('')+'</div>':'';
       host.innerHTML=markup;
     })
     .catch(()=>stale('월별 일정을 불러오지 못했습니다. 최신 일정은 네이버 예약에서 확인해 주세요.'));
