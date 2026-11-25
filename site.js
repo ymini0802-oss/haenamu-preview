@@ -33,7 +33,7 @@
     setMode('stale');
     if(status)status.innerHTML='<strong>최신 일정 확인이 필요합니다</strong><p>'+escape(message)+'</p>';
     host.hidden=false;
-    host.innerHTML='<p class="calendar-empty">원장별 진료 일정은 네이버 예약 또는 전화로 확인해 주세요.</p>';
+    host.innerHTML='<p class="calendar-empty">급한 일정 확인이 필요한 경우 한의원으로 전화 문의해 주세요.</p>';
   };
   // Clinic time: KST (UTC+09:00). This is independent of the visitor's phone timezone.
   const todayKST=new Date(Date.now()+9*60*60*1000).toISOString().slice(0,10);
@@ -48,19 +48,19 @@
       }
       const yearMonth=d.month;
       if(thisMonth>yearMonth){
-        stale('등록된 일정은 '+yearMonth.replace('-','년 ')+'월 기준입니다. 현재 일정은 네이버 예약에서 확인해 주세요.');
+        stale('등록된 일정은 '+yearMonth.replace('-','년 ')+'월 기준입니다. 새로운 월별 일정은 이곳에 업데이트됩니다.');
         return;
       }
       setMode('loaded');
       const [year,month]=yearMonth.split('-').map(Number);
       if(status){
         const prefix=thisMonth===yearMonth?'이번 달':'등록된';
-        status.innerHTML='<strong>'+year+'년 '+month+'월 진료 일정</strong><p>'+prefix+' 일정은 변경될 수 있습니다. 방문 전 네이버 예약에서 확인해 주세요.</p>';
+        status.innerHTML='<strong>'+year+'년 '+month+'월 진료 일정</strong><p>'+prefix+' 휴진·대진 등 변경 일정은 이곳에 안내합니다.</p>';
       }
       const changes=Object.entries(d.overrides||{}).filter(([date])=>date.startsWith(yearMonth+'-')&&date>=todayKST).sort(([a],[b])=>a.localeCompare(b));
       host.hidden=!changes.length;
       let markup=changes.length?'<div class="calendar-changes"><strong>'+year+'년 '+month+'월 변경 안내</strong>'+changes.map(([date,entry])=>'<p><b>'+Number(date.slice(-2))+'일</b> · '+escape(entry.note||(Array.isArray(entry.doctors)?entry.doctors.join(', '):'일정 변경'))+'</p>').join('')+'</div>':'';
       host.innerHTML=markup;
     })
-    .catch(()=>stale('월별 일정을 불러오지 못했습니다. 최신 일정은 네이버 예약에서 확인해 주세요.'));
+    .catch(()=>stale('월별 일정을 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.'));
 })();
