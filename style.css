@@ -1313,7 +1313,7 @@ footer p{overflow-wrap:anywhere}
   background:#e1e9e0
 }
 .treatment-editorial-b .treatment-feature-photo img{
-  display:block;width:100%;height:100%;object-fit:contain;object-position:center;
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
   max-height:none
 }
 .treatment-editorial-b .featured-treatments .treatment-feature-description{
@@ -1333,3 +1333,6 @@ footer p{overflow-wrap:anywhere}
   .treatment-editorial-b .featured-treatments .treatment-feature-keyline{font-size:19px}
   .treatment-editorial-b .featured-treatments .treatment-feature-description{font-size:16px;line-height:1.8}
 }
+
+/* Preserve the ultrasound probe and knee within the full-bleed photo. */
+.treatment-editorial-b .treatment-feature-photo img[src="parmacoacupuncture.webp"]{object-position:50% 75%}
