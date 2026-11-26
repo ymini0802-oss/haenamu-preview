@@ -91,7 +91,7 @@ if (/KAKAOTALK/i.test(navigator.userAgent || '')) document.documentElement.class
       arrow.className='faq-more-arrow';
       arrow.setAttribute('aria-hidden','true');
       button.append(label,arrow);
-      faq.append(group,button);
+      faq.append(button,group);
       remaining.forEach(question=>group.appendChild(question));
       button.addEventListener('click',()=>{
         const expand=group.hidden;
