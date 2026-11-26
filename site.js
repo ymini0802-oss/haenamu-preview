@@ -64,3 +64,47 @@ if (/KAKAOTALK/i.test(navigator.userAgent || '')) document.documentElement.class
     })
     .catch(()=>stale('월별 일정을 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.'));
 })();
+
+/* FAQ: keep every question in the HTML, reveal the first five initially. */
+(()=>{
+  const init=()=>{
+    document.querySelectorAll('.detail-faq').forEach((faq,index)=>{
+      if(faq.querySelector('.faq-more-toggle'))return;
+      const questions=Array.from(faq.children).filter(el=>el.tagName==='DETAILS');
+      const limit=5;
+      if(questions.length<=limit)return;
+      const remaining=questions.slice(limit);
+      const group=document.createElement('div');
+      let id='faq-extra-'+(index+1);
+      while(document.getElementById(id))id+='-more';
+      group.id=id;
+      group.className='faq-extra';
+      group.hidden=true;
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='faq-more-toggle';
+      button.setAttribute('aria-controls',id);
+      button.setAttribute('aria-expanded','false');
+      const label=document.createElement('span');
+      label.textContent='질문 더 보기 ('+remaining.length+'개)';
+      const arrow=document.createElement('span');
+      arrow.className='faq-more-arrow';
+      arrow.setAttribute('aria-hidden','true');
+      button.append(label,arrow);
+      faq.append(group,button);
+      remaining.forEach(question=>group.appendChild(question));
+      button.addEventListener('click',()=>{
+        const expand=group.hidden;
+        group.hidden=!expand;
+        button.setAttribute('aria-expanded',String(expand));
+        label.textContent=expand?'질문 접기':'질문 더 보기 ('+remaining.length+'개)';
+        if(!expand){
+          const rect=button.getBoundingClientRect();
+          if(rect.top<0||rect.bottom>window.innerHeight)button.scrollIntoView({block:'nearest'});
+        }
+      });
+    });
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
+  else init();
+})();
