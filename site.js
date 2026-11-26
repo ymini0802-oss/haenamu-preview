@@ -31,7 +31,7 @@ if (/KAKAOTALK/i.test(navigator.userAgent || '')) document.documentElement.class
   const section=document.getElementById('schedule');
   const setMode=mode=>section&&section.setAttribute('data-schedule-validation',mode);
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const colorNames=s=>escape(s).replace(/김성수|박세운|최영재/g,n=>'<span style="color:'+({'김성수':'#245b99','박세운':'#79529B','최영재':'#111111'}[n])+';font-weight:600">'+n+'</span>');
+  const colorNames=s=>escape(s).replace(/김성수|박세운|최영재/g,n=>'<span style="color:'+({'김성수':'#9D174D','박세운':'#3F6212','최영재':'#111111'}[n])+';font-weight:700">'+n+'</span>');
   const stale=message=>{
     setMode('stale');
     if(status)status.innerHTML='<strong>최신 일정 확인이 필요합니다</strong><p>'+escape(message)+'</p>';
